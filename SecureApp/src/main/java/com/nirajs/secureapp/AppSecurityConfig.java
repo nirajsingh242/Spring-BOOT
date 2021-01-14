@@ -18,7 +18,7 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	public UserDetailsService userDetailsServiceBean() throws Exception {
 		List<UserDetails> users=new ArrayList<>();
-		users.add(User.withDefaultPasswordEncoder().username("niraj").password("1234").roles("user").build());
+		 users.add(User.withDefaultPasswordEncoder().username("niraj").password("1234").roles("user").build());
 		users.add(User.withDefaultPasswordEncoder().username("saatvik").password("1234").roles("admin").build());
 		
 		return new InMemoryUserDetailsManager(users);
